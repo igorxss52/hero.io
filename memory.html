@@ -5,27 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Память - Поляков Константин Илларионович</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
-        <header>
-            <div class="ribbon-container">
-                <img src="./image/lenta.png" alt="lenta" class="lenta">
-
-                <h1>ВЕЧНАЯ ПАМЯТЬ ГЕРОЯМ<br>ВЕЛИКОЙ ОТЕЧЕСТВЕННОЙ ВОЙНЫ</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="biography.html">Биография</a></li>
-                    <li><a href="memory.html" class="active">Память о Герое</a></li>
-                </ul>
-            </nav>
-        </header>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="biography.html">Биография</a></li>
+                <li><a href="memory.html" class="active">Память о Герое</a></li>
+            </ul>
+        </nav>
         
         <main>
-            <div class="content-container">
-                <h2>Память о Герое</h2>
+            <section class="memory-section section">
+                <h2 class="section-title">Память о Герое</h2>
                 
                 <div class="memory-content">
                     <h3>Увековечение памяти</h3>
@@ -37,16 +31,21 @@
                         <li>В Бутурлиновском краеведческом музее имеется фотостенд, посвящённый землякам-бутурлиновцам — Героям Советского Союза.</li>
                     </ul>
                     
-                    <div class="memory-photos">
-                        <h3>Награды и премии </h3>
-
-                        <div class="memory-photo">
-                            <img src="./image/lenin.png" alt="Орден ленина" class="memory-photo_img">
-                            <p>Орден Ленина</p>
-                        </div>
-                        <div class="memory-photo">
-                            <img src="./image/Hero_of_the_Soviet_Union.png" class="memory-photo_img" alt="Герой Советского Союза                            ">
-                            <p>Герой Советского Союза</p>
+                    <div class="awards-section">
+                        <h3>Награды и премии</h3>
+                        <div class="awards-container">
+                            <div class="award-card">
+                                <div class="award-image">
+                                    <img src="./image/lenin.png" alt="Орден ленина">
+                                </div>
+                                <div class="award-name">Орден Ленина</div>
+                            </div>
+                            <div class="award-card">
+                                <div class="award-image">
+                                    <img src="./image/Hero_of_the_Soviet_Union.png" alt="Герой Советского Союза">
+                                </div>
+                                <div class="award-name">Герой Советского Союза</div>
+                            </div>
                         </div>
                     </div>
                     
@@ -56,12 +55,34 @@
                         <p>Их имена навечно вписаны в историю Великой Отечественной войны как символ мужества, отваги и беззаветной преданности Родине.</p>
                     </div>
                 </div>
-            </div>
+            </section>
         </main>
         
         <footer>
-            <p>© 2025 Сайт памяти Героев Советского Союза</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./image/lenta.png" alt="Георгиевская лента">
+                </div>
+                <p class="copyright">© 2025 Сайт памяти Героев Советского Союза</p>
+            </div>
         </footer>
     </div>
+
+    <script>
+        const nav = document.getElementById('main-nav');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 200) {
+                nav.classList.add('hidden');
+            } else {
+                nav.classList.remove('hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+    </script>
 </body>
 </html>

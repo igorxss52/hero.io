@@ -5,27 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Биография - Поляков Константин Илларионович</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
-        <header>
-            <div class="ribbon-container">
-                <img src="./image/lenta.png" alt="lenta" class="lenta">
-
-                <h1>ВЕЧНАЯ ПАМЯТЬ ГЕРОЯМ<br>ВЕЛИКОЙ ОТЕЧЕСТВЕННОЙ ВОЙНЫ</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="biography.html" class="active">Биография</a></li>
-                    <li><a href="memory.html">Память о Герое</a></li>
-                </ul>
-            </nav>
-        </header>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="biography.html" class="active">Биография</a></li>
+                <li><a href="memory.html">Память о Герое</a></li>
+            </ul>
+        </nav>
         
         <main>
-            <div class="content-container">
-                <h2>Биография Героя</h2>
+            <section class="biography-section section">
+                <h2 class="section-title">Биография Героя</h2>
                 
                 <div class="biography-content">
                     <div class="biography-photo">
@@ -53,12 +47,34 @@
                     <h3>Подвиг</h3>
                     <p>15 января 1943 года группа из 13 бойцов, в которую входил Константин Поляков, ворвалась в расположение противника в районе железнодорожного поселка Донской. Заняв два дома, бойцы в течение суток отбивали многочисленные атаки противника, уничтожив до 300 вражеских солдат и офицеров. Даже когда немцы подожгли дома, герои продолжали вести огонь. Все 13 бойцов погибли в этом бою, проявив исключительное мужество и героизм.</p>
                 </div>
-            </div>
+            </section>
         </main>
         
         <footer>
-            <p>© 2025 Сайт памяти Героев Советского Союза</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./image/lenta.png" alt="Георгиевская лента">
+                </div>
+                <p class="copyright">© 2025 Сайт памяти Героев Советского Союза</p>
+            </div>
         </footer>
     </div>
+
+    <script>
+        const nav = document.getElementById('main-nav');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 200) {
+                nav.classList.add('hidden');
+            } else {
+                nav.classList.remove('hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+    </script>
 </body>
 </html>

@@ -5,70 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Поляков Константин Илларионович - Герой Советского Союза</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <div class="ribbon-container">
-                <img src="./image/lenta.png" alt="lenta" class="lenta">
-                <h1>ВЕЧНАЯ ПАМЯТЬ ГЕРОЯМ<br>ВЕЛИКОЙ ОТЕЧЕСТВЕННОЙ ВОЙНЫ</h1>
+            <div class="header-bg"></div>
+            <div class="header-overlay"></div>
+            <div class="header-content">
+                <div class="ribbon-container">
+                    <img src="./image/lenta.png" alt="Георгиевская лента" class="ribbon">
+                </div>
+                <h1 class="hero-title">Вечная память героям Великой Отечественной войны</h1>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Главная</a></li>
-                    <li><a href="biography.html">Биография</a></li>
-                    <li><a href="memory.html">Память о Герое</a></li>
-                </ul>
-            </nav>
+            <div class="scroll-indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+            </div>
         </header>
         
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="biography.html">Биография</a></li>
+                <li><a href="memory.html">Память о Герое</a></li>
+            </ul>
+        </nav>
+        
         <main>
-            <div class="hero-card">
-                <div class="hero-photo">
-                    <img src="./image/Polyakov_KI.jpg" alt="Константин Илларионович Поляков">
-                    <div class="photo-caption">Константин Илларионович Поляков<br>20.02.1924 - 15.01.1943</div>
+            <section class="hero-section">
+                <div class="hero-card">
+                    <div class="hero-photo-container">
+                        <div class="hero-photo">
+                            <img src="./image/Polyakov_KI.jpg" alt="Константин Илларионович Поляков">
+                            <div class="photo-frame"></div>
+                        </div>
+                        <div class="photo-caption">Константин Илларионович Поляков<br>20.02.1924 - 15.01.1943</div>
+                    </div>
+                    
+                    <div class="hero-info">
+                        <h2 class="hero-name">Поляков Константин Илларионович</h2>
+                        <p class="dates">20 февраля 1924 — 15 января 1943</p>
+                        
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <h3>Звание</h3>
+                                <p>Гвардии Красноармеец</p>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>Род войск</h3>
+                                <p>Пехота</p>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>Место рождения</h3>
+                                <p>село Нижний Кисляй, Бобровский уезд, Воронежская губерния</p>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>Часть</h3>
+                                <p>130-й гвардейский стрелковый полк 44-й гвардейской стрелковой дивизии</p>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>Награды</h3>
+                                <p>Герой Советского Союза, Орден Ленина</p>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-description">
+                            <p>Константин Илларионович Поляков — стрелок 130-го гвардейского стрелкового полка 44-й гвардейской стрелковой дивизии 6-го гвардейского стрелкового корпуса 1-й гвардейской армии Юго-Западного фронта, гвардии красноармеец. Герой Советского Союза.</p>
+                            <a href="biography.html" class="read-more">Читать подробнее</a>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="hero-info">
-                    <h2>Поляков Константин Илларионович</h2>
-                    <p class="dates">(20.02.1924 - 15.01.1943)</p>
-                    
-                    <div class="info-section">
-                        <h3>Звание</h3>
-                        <p>Гвардии Красноармеец</p>
-                    </div>
-                    
-                    <div class="info-section">
-                        <h3>Место рождения</h3>
-                        <p>село Нижний Кисляй, Бобровский уезд, Воронежская губерния, РСФСР, СССР</p>
-                    </div>
-                    
-                    <div class="info-section">
-                        <h3>Род войск</h3>
-                        <p>Пехота</p>
-                    </div>
-                    
-                    <div class="info-section">
-                        <h3>Часть</h3>
-                        <p>130-й гвардейский стрелковый полк 44-й гвардейской стрелковой дивизии</p>
-                    </div>
-                    
-                    <div class="info-section">
-                        <h3>Награды</h3>
-                        <p>Герой Советского Союза, Орден Ленина</p>
-                    </div>
-                    
-                    <div class="hero-description">
-                        <p>Константин Илларионович Поляков — стрелок 130-го гвардейского стрелкового полка 44-й гвардейской стрелковой дивизии 6-го гвардейского стрелкового корпуса 1-й гвардейской армии Юго-Западного фронта, гвардии красноармеец. Герой Советского Союза.</p>
-                        <a href="biography.html" class="read-more">Читать подробнее</a>
-                    </div>
-                </div>
-            </div>
+            </section>
         </main>
         
         <footer>
-            <p>© 2025 Сайт памяти Героев Советского Союза</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./image/lenta.png" alt="Георгиевская лента">
+                </div>
+                <p class="copyright">© 2025 Сайт памяти Героев Советского Союза</p>
+            </div>
         </footer>
     </div>
+
+    <script>
+        document.querySelector('.scroll-indicator').addEventListener('click', function() {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+
+        const nav = document.getElementById('main-nav');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop < 50) {
+                nav.classList.add('transparent');
+            } else {
+                nav.classList.remove('transparent');
+            }
+            
+            if (scrollTop > lastScrollTop && scrollTop > 200) {
+                nav.classList.add('hidden');
+            } else {
+                nav.classList.remove('hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        if (window.pageYOffset < 50) {
+            nav.classList.add('transparent');
+        }
+    </script>
 </body>
 </html>
